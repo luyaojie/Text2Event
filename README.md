@@ -119,14 +119,8 @@ If you need to use constrained decoding, you need to write the corresponding dec
 
 ## Pre-trained Model
 
-ACE05-EN: [[T5-base]()] [[T5-Large]()]
-
-ACE05-EN+: [[T5-Large]()]
-
-ERE-EN: [[T5-Large]()]
-
 Note:
-- *Pre-trained models on other open available event extraction datasets are coming soon.*
+- *Pre-trained models are coming soon.*
 
 ## Event Datasets Preprocessing
 
