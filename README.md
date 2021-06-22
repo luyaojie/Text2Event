@@ -1,6 +1,6 @@
 # Text2Event
 
-- An implementation for ``Text2Event: Controllable Sequence-to-Structure Generation for End-to-end Event Extraction``
+- An implementation for [``Text2Event: Controllable Sequence-to-Structure Generation for End-to-end Event Extraction``](https://arxiv.org/abs/2106.09232)
 - Please contact [Yaojie Lu](http://luyaojie.github.io) ([@luyaojie](mailto:yaojie2017@iscas.ac.cn)) for questions and suggestions.
 
 ## Quick links
