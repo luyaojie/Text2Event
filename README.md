@@ -1,6 +1,6 @@
 # Text2Event
 
-- An implementation for [``Text2Event: Controllable Sequence-to-Structure Generation for End-to-end Event Extraction``](https://arxiv.org/abs/2106.09232)
+- An implementation for [``Text2Event: Controllable Sequence-to-Structure Generation for End-to-end Event Extraction``](https://aclanthology.org/2021.acl-long.217)
 - Please contact [Yaojie Lu](http://luyaojie.github.io) ([@luyaojie](mailto:yaojie2017@iscas.ac.cn)) for questions and suggestions.
 
 ## Quick links
@@ -197,20 +197,24 @@ If this repository helps you, please cite this paper:
 Yaojie Lu, Hongyu Lin, Jin Xu, Xianpei Han, Jialong Tang, Annan Li, Le Sun, Meng Liao, Shaoyi Chen. Text2Event: Controllable Sequence-to-Structure Generation for End-to-end Event Extraction. The Joint Conference of the 59th Annual Meeting of the Association for Computational Linguistics and the 11th International Joint Conference on Natural Language Processing (ACL-IJCNLP 2021).
 
 ```
-@inproceedings{yaojie:2021:text2event,
-      title={\textsc{Text2Event}: Controllable Sequence-to-Structure Generation for End-to-end Event Extraction}, 
-      author = {
-        Lu, Yaojie and
-        Lin, Hongyu and
-        Xu, Jin and
-        Han, Xianpei and
-        Tang, Jialong and
-        Li, Annan and
-        Sun, Le and
-        Liao, Meng and
-        Chen, Shaoyi
-      },
-      year={2021},
-      booktitle="Proceedings of the Joint Conference of the 59th Annual Meeting of the Association for Computational Linguistics and the 11th International Joint Conference on Natural Language Processing (ACL-IJCNLP 2021)",
+@inproceedings{lu-etal-2021-text2event,
+    title = "{T}ext2{E}vent: Controllable Sequence-to-Structure Generation for End-to-end Event Extraction",
+    author = "Lu, Yaojie  and
+      Lin, Hongyu  and
+      Xu, Jin  and
+      Han, Xianpei  and
+      Tang, Jialong  and
+      Li, Annan  and
+      Sun, Le  and
+      Liao, Meng  and
+      Chen, Shaoyi",
+    booktitle = "Proceedings of the 59th Annual Meeting of the Association for Computational Linguistics and the 11th International Joint Conference on Natural Language Processing (Volume 1: Long Papers)",
+    month = aug,
+    year = "2021",
+    address = "Online",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2021.acl-long.217",
+    pages = "2795--2806",
+    abstract = "Event extraction is challenging due to the complex structure of event records and the semantic gap between text and event. Traditional methods usually extract event records by decomposing the complex structure prediction task into multiple subtasks. In this paper, we propose Text2Event, a sequence-to-structure generation paradigm that can directly extract events from the text in an end-to-end manner. Specifically, we design a sequence-to-structure network for unified event extraction, a constrained decoding algorithm for event knowledge injection during inference, and a curriculum learning algorithm for efficient model learning. Experimental results show that, by uniformly modeling all tasks in a single model and universally predicting different labels, our method can achieve competitive performance using only record-level annotations in both supervised learning and transfer learning settings.",
 }
 ```
