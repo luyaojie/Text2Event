@@ -589,24 +589,6 @@ def main():
             pad_to_multiple_of=8 if training_args.fp16 else None,
         )
 
-    # Metric
-    metric_name = "rouge" if data_args.task.startswith(
-        "summarization") else "sacrebleu"
-    metric = load_metric(metric_name)
-
-    def postprocess_text(preds, labels):
-        preds = [pred.strip() for pred in preds]
-        labels = [label.strip() for label in labels]
-
-        # rougeLSum expects newline after each sentence
-        if metric_name == "rouge":
-            preds = ["\n".join(nltk.sent_tokenize(pred)) for pred in preds]
-            labels = ["\n".join(nltk.sent_tokenize(label)) for label in labels]
-        else:  # sacrebleu
-            labels = [[label] for label in labels]
-
-        return preds, labels
-
     def compute_metrics(eval_preds):
         preds, labels = eval_preds
         if isinstance(preds, tuple):
@@ -626,17 +608,6 @@ def main():
 
         decoded_preds = [clean_str(x) for x in decoded_preds]
         decoded_labels = [clean_str(x) for x in decoded_labels]
-
-        # Some simple post-processing
-        # decoded_preds, decoded_labels = postprocess_text(decoded_preds, decoded_labels)
-
-        # if metric_name == "rouge":
-        #     result = metric.compute(predictions=decoded_preds, references=decoded_labels, use_stemmer=True)
-        #     # Extract a few results from ROUGE
-        #     result = {key: value.mid.fmeasure * 100 for key, value in result.items()}
-        # else:
-        #     result = metric.compute(predictions=decoded_preds, references=decoded_labels)
-        #     result = {"bleu": result["score"]}
 
         result = get_extract_metrics(
             pred_lns=decoded_preds,
