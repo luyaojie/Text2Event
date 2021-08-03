@@ -3,6 +3,9 @@
 - An implementation for [``Text2Event: Controllable Sequence-to-Structure Generation for End-to-end Event Extraction``](https://arxiv.org/abs/2106.09232)
 - Please contact [Yaojie Lu](http://luyaojie.github.io) ([@luyaojie](mailto:yaojie2017@iscas.ac.cn)) for questions and suggestions.
 
+## Update
+- [2021-08-03] Update pre-trained models
+
 ## Quick links
 * [Requirements](#Requirements)
 * [Quick Start](#Quick-start)
@@ -119,8 +122,27 @@ If you need to use constrained decoding, you need to write the corresponding dec
 
 ## Pre-trained Model
 
-Note:
-- *Pre-trained models are coming soon.*
+You can find the pre-trained models as following google drive links or download models using command `gdown` (`pip install gdown`).
+
+[dyiepp_ace2005_en_t5_base.zip](https://drive.google.com/file/d/1_fOmnSatNfceL9DZPxpof5AT9Oo7vTrC/view?usp=sharing)
+```bash
+gdown --id 1_fOmnSatNfceL9DZPxpof5AT9Oo7vTrC && unzip dyiepp_ace2005_en_t5_base.zip
+```
+
+[dyiepp_ace2005_en_t5_large.zip](https://drive.google.com/file/d/10iY1obkbgJtTKwfoOFevqL5AwG-hLvhU/view?usp=sharing)
+```bash
+gdown --id 10iY1obkbgJtTKwfoOFevqL5AwG-hLvhU && unzip dyiepp_ace2005_en_t5_large.zip
+```
+
+[oneie_ace2005_en_t5_large.zip](https://drive.google.com/file/d/1zwnptRbdZntPT4ucqSANeaJ3vvwKliUe/view?usp=sharing)
+```bash
+gdown --id 1zwnptRbdZntPT4ucqSANeaJ3vvwKliUe && unzip oneie_ace2005_en_t5_large.zip
+```
+
+[oneie_ere_en_t5_large.zip](https://drive.google.com/file/d/1WG7-pTZ3K49VMbQIONaDq_0pUXAcoXrZ/view?usp=sharing)
+```bash
+gdown --id 1WG7-pTZ3K49VMbQIONaDq_0pUXAcoXrZ && unzip oneie_ere_en_t5_large.zip
+```
 
 ## Event Datasets Preprocessing
 

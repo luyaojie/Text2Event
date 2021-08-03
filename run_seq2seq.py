@@ -678,13 +678,12 @@ def main():
 
         train_result = trainer.train(resume_from_checkpoint=checkpoint)
         trainer.save_model()  # Saves the tokenizer too for easy upload
-
-        # train_pred_results = trainer.predict(
-        #     train_dataset,
-        #     metric_key_prefix="train",
-        #     max_length=data_args.val_max_target_length,
-        #     num_beams=data_args.num_beams,
-        # )
+        decoding_type_schema.write_to_file(
+            os.path.join(
+                training_args.output_dir,
+                "event.schema",
+            )
+        )
 
         output_train_file = os.path.join(
             training_args.output_dir, "train_results.txt")
@@ -699,15 +698,6 @@ def main():
             trainer.state.save_to_json(os.path.join(
                 training_args.output_dir, "trainer_state.json"))
 
-            # if training_args.predict_with_generate:
-            #     train_preds = tokenizer.batch_decode(
-            #         train_pred_results.predictions, skip_special_tokens=False, clean_up_tokenization_spaces=True
-            #     )
-            #     train_preds = [pred.replace('<pad>', '').replace('<s>', '').replace('</s>', '').strip()
-            #                    for pred in train_preds]
-            #     output_train_preds_file = os.path.join(training_args.output_dir, "train_preds_seq2seq.txt")
-            #     with open(output_train_preds_file, "w") as writer:
-            #         writer.write("\n".join(train_preds))
 
     # Evaluation
     results = {}
