@@ -373,7 +373,6 @@ def main():
         cache_dir=model_args.cache_dir,
         revision=model_args.model_revision,
         use_auth_token=True if model_args.use_auth_token else None,
-        mirror='tuna',
     )
 
     # !!! Sometimes default max_length is setting to 20.
@@ -385,7 +384,6 @@ def main():
         use_fast=model_args.use_fast_tokenizer,
         revision=model_args.model_revision,
         use_auth_token=True if model_args.use_auth_token else None,
-        mirror='tuna',
     )
 
     to_remove_token_list = list()
@@ -403,7 +401,6 @@ def main():
         cache_dir=model_args.cache_dir,
         revision=model_args.model_revision,
         use_auth_token=True if model_args.use_auth_token else None,
-        mirror='tuna',
     )
 
     if tokenizer.encode("<extra_id_0> <extra_id_1>") != [32099, 32098, 1]:
