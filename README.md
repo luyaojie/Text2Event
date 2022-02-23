@@ -149,6 +149,32 @@ gdown --id 1WG7-pTZ3K49VMbQIONaDq_0pUXAcoXrZ && unzip oneie_ere_en_t5_large.zip
 We first refer to the following code and environments [[dygiepp](https://github.com/dwadden/dygiepp)] and [[oneie v0.4.7](http://blender.cs.illinois.edu/software/oneie/)] for data preprocessing.
 Thanks to them！
 
+### DYGIEPP
+Generated Path: `dygiepp/data/ace-event/processed-data/default-settings/json/`
+
+Preprocessing Script:
+``` bash
+python ./scripts/data/ace-event/parse_ace_event.py default-settings
+```
+
+The version of spacy is `2.0.18`, it may affect results of sentence splitting. And the version of dygiepp I used as follows
+```
+commit edec203b73d32824f14e03b5510e020130b69a7f (HEAD -> master)
+Author: dwadden <dwadden@cs.washington.edu>
+Date: Sun Oct 11 15:02:33 2020 -0700
+
+Add `dataset` argument when creating new doc-key.
+```
+
+### OneIE
+``` bash
+ACE_DATA_FOLDER=<ACE_PATH>
+mkdir -p data/ace05-EN
+python preprocessing/process_ace.py -i ${ACE_DATA_FOLDER}/data -o data/ace05-EN -s resource/splits/ACE05-E -b bert-large-cased -l english
+wc -l data/ace05-EN/*
+```
+
+
 After data preprocessing and we get the following data files:
 
 ```text
