@@ -149,7 +149,7 @@ gdown --id 1WG7-pTZ3K49VMbQIONaDq_0pUXAcoXrZ && unzip oneie_ere_en_t5_large.zip
 We first refer to the following code and environments [[dygiepp](https://github.com/dwadden/dygiepp)] and [[oneie v0.4.7](http://blender.cs.illinois.edu/software/oneie/)] for data preprocessing.
 Thanks to them！
 
-### DYGIEPP
+### DYGIEPP ACE05
 Generated Path: `dygiepp/data/ace-event/processed-data/default-settings/json/`
 
 Preprocessing Script:
@@ -166,7 +166,7 @@ Date: Sun Oct 11 15:02:33 2020 -0700
 Add `dataset` argument when creating new doc-key.
 ```
 
-### OneIE
+### OneIE ACE05+
 ``` bash
 ACE_DATA_FOLDER=<ACE_PATH>
 mkdir -p data/ace05-EN
