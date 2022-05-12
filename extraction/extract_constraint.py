@@ -21,7 +21,7 @@ def match_sublist(the_list, to_match):
     """
     len_to_match = len(to_match)
     matched_list = list()
-    for index in range(len(the_list) - len_to_match):
+    for index in range(len(the_list) - len_to_match + 1):
         if to_match == the_list[index:index + len_to_match]:
             matched_list += [(index, index + len_to_match - 1)]
     return matched_list
