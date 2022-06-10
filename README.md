@@ -38,7 +38,7 @@ pip install -r requirements.txt
 
 ### Data Format
 
-Data folder contains four files：
+Data folder contains four files (The detailed preprocessing steps refer to `Event Datasets Preprocessing`):
 
 ```text
 data/text2tree/one_ie_ace2005_subtype
@@ -173,6 +173,8 @@ mkdir -p data/ace05-EN
 python preprocessing/process_ace.py -i ${ACE_DATA_FOLDER}/data -o data/ace05-EN -s resource/splits/ACE05-E -b bert-large-cased -l english
 wc -l data/ace05-EN/*
 ```
+
+- `nltk==3.5` is used in our experiments, we found `nltk==3.6+` may leads different sentence numbers.
 
 
 After data preprocessing and we get the following data files:
