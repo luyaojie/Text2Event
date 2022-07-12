@@ -22,7 +22,7 @@ conllu
 sentencepiece != 0.1.92
 protobuf
 
-numpy~=1.19.2
+numpy==1.22
 tabulate~=0.8.7
 filelock~=3.0.12
 dataclasses~=0.6
